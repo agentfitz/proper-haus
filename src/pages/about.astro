@@ -1,7 +1,47 @@
 ---
+import { Image } from 'astro:assets';
+import img1 from '../assets/img/pic01.jpg';
 import Layout from '../layouts/main.astro';
 ---
 
 <Layout>
-	About page
+	<!-- One -->
+	<section style="padding-left: 300px;" id="one" class="wrapper style2 spotlights">
+		<section>
+			<a href="#" class="image"><Image src={img1} alt="hello world" /></a>
+			<div class="content">
+				<div class="inner">
+					<h2>Sed ipsum dolor</h2>
+					<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+					<ul class="actions">
+						<li><a href="generic.html" class="button">Learn more</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<a href="#" class="image"><img src="assets/img/pic02.jpg" alt="" data-position="top center" /></a>
+			<div class="content">
+				<div class="inner">
+					<h2>Feugiat consequat</h2>
+					<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+					<ul class="actions">
+						<li><a href="generic.html" class="button">Learn more</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section>
+			<a href="#" class="image"><img src="assets/img/pic03.jpg" alt="" data-position="25% 25%" /></a>
+			<div class="content">
+				<div class="inner">
+					<h2>Ultricies aliquam</h2>
+					<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+					<ul class="actions">
+						<li><a href="generic.html" class="button">Learn more</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</section>
 </Layout>
