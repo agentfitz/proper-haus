@@ -1,0 +1,12 @@
+[build]
+  command = "astro build"
+  publish = "dist"
+
+# Optional: if your project is in a subdirectory
+# base = "my-astro-site"
+
+# Example for redirects (if not using Astro config for redirects)
+# [[redirects]]
+#   from = "/old-path"
+#   to = "/new-path"
+#   status = 301
