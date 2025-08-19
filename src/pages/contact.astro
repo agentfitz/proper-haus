@@ -1,65 +1,79 @@
 ---
-import Layout from '../layouts/main.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
 ---
 
-<Layout>
-	
-<!-- Three -->
-<section id="three" class="wrapper style1 fade-up">
-	<div class="inner">
-		<h2>Get in touch</h2>
-		<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-		<div class="split style1">
-			<section>
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field half">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
-						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="5"></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><a href="" class="button submit">Send Message</a></li>
-					</ul>
-				</form>
-			</section>
-			<section>
-				<ul class="contact">
-					<li>
-						<h3>Address</h3>
-						<span>12345 Somewhere Road #654<br />
-						Nashville, TN 00000-0000<br />
-						USA</span>
-					</li>
-					<li>
-						<h3>Email</h3>
-						<a href="#">user@untitled.tld</a>
-					</li>
-					<li>
-						<h3>Phone</h3>
-						<span>(000) 000-0000</span>
-					</li>
-					<li>
-						<h3>Social</h3>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-		</div>
-	</div>
-</section>
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Let's Connect!" />
+
+  <ContactUs
+    id="form"
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'General support',
+        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+      },
+      {
+        title: 'Contact sales',
+        description:
+          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+      },
+      {
+        title: 'Technical support',
+        description:
+          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+      },
+      {
+        title: 'Phone',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'contact@support.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
 </Layout>
